@@ -1,0 +1,16 @@
+{
+  "backend": "tokenizers",
+  "bos_token": "<s>",
+  "cls_token": "<s>",
+  "do_lower_case": true,
+  "eos_token": "</s>",
+  "is_local": false,
+  "mask_token": "<mask>",
+  "model_max_length": 384,
+  "pad_token": "<pad>",
+  "sep_token": "</s>",
+  "strip_accents": null,
+  "tokenize_chinese_chars": true,
+  "tokenizer_class": "MPNetTokenizer",
+  "unk_token": "[UNK]"
+}

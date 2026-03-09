@@ -1,0 +1,14 @@
+## Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+## Large model weights (too large for GitHub — store in Google Drive / HuggingFace Hub)
+distilbert_finetuned/model.safetensors
+finetuned_recommender_v2/model.safetensors
+
+## DS Store
+.DS_Store
