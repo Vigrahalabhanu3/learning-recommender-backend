@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: learning-recommender-backend
+    env: python
+    region: singapore        # Closest to India
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    envVars:
+      - key: HF_DISTILBERT_REPO
+        value: ""            # Fill in: YourHFUsername/distilbert-finetuned
+      - key: HF_RECOMMENDER_REPO
+        value: ""            # Fill in: YourHFUsername/finetuned-recommender-v2
+      - key: HF_TOKEN
+        value: ""            # Fill in: Your HuggingFace token (for private repos)
