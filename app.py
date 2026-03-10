@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Load models
 device         = torch.device("cuda" if torch.cuda.is_available() else "cpu")
