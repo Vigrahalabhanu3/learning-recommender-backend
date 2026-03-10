@@ -9,4 +9,4 @@ python3 download_models.py
 
 # Step 2: Start production server
 echo "🌐 Starting Gunicorn server..."
-exec gunicorn api:app --bind 0.0.0.0:${PORT:-5000} --workers 1 --timeout 120
+exec gunicorn app:app --bind 0.0.0.0:${PORT:-5000} --workers 1 --timeout 120
