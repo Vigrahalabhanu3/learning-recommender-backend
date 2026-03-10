@@ -4,8 +4,8 @@ services:
     env: python
     region: singapore
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: bash start.sh
+    buildCommand: pip install -r requirements.txt && python download_models.py
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 300
     envVars:
       - key: HF_DISTILBERT_REPO
         value: "Bhanu6301/distilbert-finetuned"
